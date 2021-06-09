@@ -71,12 +71,14 @@ main h1 {
 main p {
   font-weight: bold;
 }
-main input {
+main input,
+.contact-us-form input,
+.contact-us-form textarea {
   padding: 8px;
   width: 75%;
   border-radius: 4px;
   border: 2px solid #fff;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 main input:focus {
   border: 2px solid #01d5d5;
@@ -106,7 +108,7 @@ main button:hover {
 .why-us,
 .contact-us {
   overflow: hidden;
-  margin-top: 7.5%;
+  margin-top: 6%;
 }
 .how-does-it-work .title,
 .why-us .title,
@@ -130,4 +132,59 @@ main button:hover {
 .how-does-it-work > div > p,
 .why-us > div > p {
   color: rgba(0, 0, 0, 0.7);
+}
+.contact-us-form {
+  margin-left: 25%;
+  margin-top: 50px;
+  width: 50%;
+}
+.contact-us-form * {
+  display: block;
+}
+.contact-us-form label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #111;
+}
+.contact-us-form input,
+.contact-us-form textarea {
+  border: 1px solid #000000;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contact-us-form input:focus,
+.contact-us-form textarea:focus {
+  box-shadow: 0 0 4px 0px #ad0000;
+  border: 1px solid #ad0000;
+}
+.contact-us-form button *{display: inline;}
+.contact-us-form button{
+  width: 100%;
+  padding: 5px;
+  margin-top: 20px;
+  background-color: #d91212;
+  color: #fff;
+  border-radius: 4px;
+  border: 3px solid transparent;
+  text-align: center;
+  font-weight: 600;
+  transition: all ease-in-out 0.25s;
+}
+.contact-us-form button:hover{
+  background-color: #fff;
+  color: #d91212;
+  border: 3px solid;
+}  
+footer{
+  margin-top: 50px;
+width: 100%;
+background-color: #bd1212;
+color: #fff;
+padding: 10px;
+
+}
+footer span{
+  text-decoration: underline;
+  font-weight: 600;
 }
