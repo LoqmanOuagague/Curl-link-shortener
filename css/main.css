@@ -8,6 +8,8 @@
 }
 body {
   margin: 0;
+  background: #fafafa;
+
 }
 .right {
   float: right;
@@ -65,7 +67,8 @@ main {
   text-align: center;
   color: #fff;
 }
-main h1 {
+main h1,
+.error h1 {
   font-size: 48px;
 }
 main p {
@@ -158,8 +161,11 @@ main button:hover {
   box-shadow: 0 0 4px 0px #ad0000;
   border: 1px solid #ad0000;
 }
-.contact-us-form button *{display: inline;}
-.contact-us-form button{
+.contact-us-form button * {
+  display: inline;
+}
+.contact-us-form button,
+.error button {
   width: 100%;
   padding: 5px;
   margin-top: 20px;
@@ -171,20 +177,34 @@ main button:hover {
   font-weight: 600;
   transition: all ease-in-out 0.25s;
 }
-.contact-us-form button:hover{
+.contact-us-form button:hover,
+.error button:hover {
   background-color: #fff;
   color: #d91212;
   border: 3px solid;
-}  
-footer{
-  margin-top: 50px;
-width: 100%;
-background-color: #bd1212;
-color: #fff;
-padding: 10px;
-
 }
-footer span{
+footer {
+  margin-top: 50px;
+  width: 100%;
+  background-color: #bd1212;
+  color: #fff;
+  padding: 10px;
+}
+footer span {
   text-decoration: underline;
   font-weight: 600;
+}
+.error {
+  text-align: center;
+  margin: 50px 25%;
+  width: 50%;
+}
+.error img {
+  height: 512px;
+  margin-left: 52px;
+}
+.error button {
+  margin-top: 0px;
+  width: 512px;
+  margin-left: 8%;
 }
