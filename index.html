@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/main.css" />
+    
 </head>
 
 <body>
-    <div class="main-content" style="">
+    <div class="main-content">
     <header>
         <section class="logo left">
             <img src="./css/img/Logo.svg" class="left" alt="" />
@@ -30,8 +31,8 @@
     <main>
             <h1>Welcome to <b>Curl</b> link shortener</h1>
             <p>Please paste the link you want to shorten in the input below</p>
-            <input type="text" placeholder="https://www.example.com/page">
-            <button>
+            <input type="text" name="link" id="link-input" placeholder="https://www.example.com/page">
+            <button id="shorten" type="submit">
                 Shorten
             </button>
     </main>
@@ -91,6 +92,7 @@
 <footer>
     This website is designed and programmed by <span>@Loqman.ouagague</span>
 </footer>
+<script src="js/main.js"></script>
 </body>
 
 </html>
