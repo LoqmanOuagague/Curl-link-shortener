@@ -39,11 +39,11 @@ if ($_POST) {
         if(!empty($link)){
             header("Location: $link");
         }else{
-            header("Location: error.html");
+            header("Location: error.php");
         }
         
         exit();
     }
 }else{
-    header("Location: index.html");
+    header("Location: index.php");
 }
