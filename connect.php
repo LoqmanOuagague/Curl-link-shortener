@@ -6,10 +6,10 @@ use Dotenv\Dotenv;
 $env = Dotenv::createImmutable(__DIR__);
 $env->load();
 try {
-    $pdo = new PDO($_ENV['DATABASE_DRIVER'] . ":host=" . $_ENV['DATABASE_HOST'] . ";port=" . $_ENV['DATABASE_PORT'] . ";dbname=" . $_ENV['DATABASE_NAME'] . ";charset=UTF8;user=" . $_ENV['DATABASE_USERNAME'] . ";password=" . $_ENV['DATABASE_PASSWORD']);
+    $pdo = new PDO($_ENV['DATABASE_DRIVER'] . ":host=" . $_ENV['DATABASE_HOST'] . ";port=" . $_ENV['DATABASE_PORT'] . ";dbname=" . $_ENV['DATABASE_NAME'] . ";user=" . $_ENV['DATABASE_USERNAME'] . ";password=" . $_ENV['DATABASE_PASSWORD']);
 
     if ($pdo) {
-        echo "Connected to the $db database successfully!";
+        echo "Connected to the database successfully!";
     }
 } catch (PDOException $e) {
     echo $e->getMessage();
