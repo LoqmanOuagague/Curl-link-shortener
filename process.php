@@ -17,6 +17,7 @@ if ($_POST) {
             $code = rand_string();
             
             $query = "INSERT INTO links (id,redirect_to, redirected_from) VALUES (NULL,'".$code."','".$link."' )";
+            echo $query;
             $statement = $pdo->prepare($query);
             $statement->execute();
             echo json_encode(["new_link" => $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'] . "?r=" . $code]);
