@@ -11,7 +11,7 @@ try {
     if ($pdo) {
         //$result = $pdo->query("SHOW TABLES LIKE links");
         //if (count($result) == 0) {
-        $createtable = $pdo->exec("CREATE TABLE `links` ( `id` INT NOT NULL AUTO_INCREMENT , `redirect_to` VARCHAR(10) NOT NULL , `redirected_from` TEXT NOT NULL , PRIMARY KEY (`id`));");
+        $createtable = $pdo->exec("CREATE TABLE links ( id INT NOT NULL AUTO_INCREMENT , redirect_to VARCHAR(10) NOT NULL , redirected_from TEXT NOT NULL , PRIMARY KEY (id));");
         if ($createtable == true) {
             echo "done";
         } else {
@@ -22,4 +22,4 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-/*CREATE TABLE `test`.`links` ( `id` INT NOT NULL AUTO_INCREMENT , `redirect_to` VARCHAR(10) NOT NULL , `redirected_from` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;  */
+/*CREATE TABLE test`.`links` ( `id` INT NOT NULL AUTO_INCREMENT , `redirect_to` VARCHAR(10) NOT NULL , `redirected_from` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;  */
