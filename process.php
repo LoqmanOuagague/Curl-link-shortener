@@ -15,12 +15,10 @@ if ($_POST) {
     if (!empty($link)) {
         if (preg_match('|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|i', $link)) {
             $code = rand_string();
-            
-            $query = "INSERT INTO links (redirect_to, redirected_from) VALUES ('".$code."','".$link."' );";
-            echo $query;
+            $query = "INSERT INTO links (redirect_to, redirected_from) VALUES ('" . $code . "','" . $link . "' );";
             $statement = $pdo->prepare($query);
             $statement->execute();
-            echo json_encode(["new_link" => $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'] . "?r=" . $code]);
+            echo json_encode(["new_link" => $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?r=" . $code]);
         } else {
             echo json_encode(["error" => "2"]);
         }
@@ -34,14 +32,14 @@ if ($_POST) {
         $pdo_statement = $pdo->prepare('SELECT * FROM links WHERE redirect_to=:redirect_to');
         $pdo_statement->execute(['redirect_to' => $code]);
         $link = $pdo_statement->fetch()[2];
-        if(!empty($link)){
+        if (!empty($link)) {
             header("Location: $link");
-        }else{
+        } else {
             header("Location: error.php");
         }
-        
+
         exit();
     }
-}else{
+} else {
     header("Location: index.php");
 }

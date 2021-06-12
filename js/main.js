@@ -9,7 +9,6 @@ document.getElementById("shorten").addEventListener('click', function() {
         xhr.onreadystatechange = function() { // Call a function when the state changes.
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
                 var response =JSON.parse(xhr.response);
-               console.log(response);
                if(response.error == "1"){
                 alert("OOps! it seems that the input is empty"); 
                }else if(response.error == "2"){
