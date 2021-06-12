@@ -16,7 +16,7 @@ if ($_POST) {
         if (preg_match('|^http(s)?://[a-z0-9-]+(.[a-z0-9-]+)*(:[0-9]+)?(/.*)?$|i', $link)) {
             $code = rand_string();
             
-            $query = "INSERT INTO links (id,redirect_to, redirected_from) VALUES (NULL,:redirect_to, :redirected_from)";
+            $query = "INSERT INTO public.links (id,redirect_to, redirected_from) VALUES (NULL,:redirect_to, :redirected_from)";
             $statement = $pdo->prepare($query);
             $statement->execute([
                 'redirect_to' => $code,
