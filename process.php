@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=Curl;charset=UTF8", 'root', '');
+require_once "./connect.php";
 $link = $_POST['link'];
 function rand_string()
 {
