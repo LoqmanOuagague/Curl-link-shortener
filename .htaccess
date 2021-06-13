@@ -1,4 +1,4 @@
-ErrorDocument 404 http://curl-link-shortener.herokuapp.com/error.php
+ErrorDocument 404 http://curl-link-shortener.herokuapp.com/page-not-found
 RewriteEngine on
 RewriteRule ^redirect/([0-9a-zA-Z]+) process.php?r=$1 [NC,L]
 RewriteRule ^page-not-found error.php [NC,L]

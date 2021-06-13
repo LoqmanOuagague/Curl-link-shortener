@@ -1,4 +1,5 @@
 <?php
+
 require_once realpath(__DIR__ . "/vendor/autoload.php");
 
 use Dotenv\Dotenv;
@@ -10,4 +11,3 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-/*CREATE TABLE test`.`links` ( `id` INT NOT NULL AUTO_INCREMENT , `redirect_to` VARCHAR(10) NOT NULL , `redirected_from` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;  */
