@@ -16,7 +16,7 @@
 <section class="error">
     <h1>Page not found</h1>
     <img src="css/img/error.svg" alt="">
-    <button>Go home</button>
+    <a href="./index.php">Go home</a>
 </section>
 </body>
 
