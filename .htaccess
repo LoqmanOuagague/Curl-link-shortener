@@ -1,1 +1,3 @@
 ErrorDocument 404 http://curl-link-shortener.herokuapp.com/error.php
+RewriteEngine on
+RewriteRule ^redirect/([0-9a-zA-Z]+) process.php?r=$1 [NC,L]

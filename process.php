@@ -18,7 +18,7 @@ if ($_POST) {
             $query = "INSERT INTO links (redirect_to, redirected_from) VALUES ('" . $code . "','" . $link . "' );";
             $statement = $pdo->prepare($query);
             $statement->execute();
-            echo json_encode(["new_link" => $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?r=" . $code]);
+            echo json_encode(["new_link" => $_SERVER['SERVER_NAME'] .  "/redirect/" . $code]);
         } else {
             echo json_encode(["error" => "2"]);
         }
