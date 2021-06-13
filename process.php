@@ -35,11 +35,11 @@ if ($_POST) {
         if (!empty($link)) {
             header("Location: $link");
         } else {
-            header("Location: error.php");
+            header("Location: ".$_SERVER['SERVER_NAME']."/page-not-found");
         }
 
         exit();
     }
 } else {
-    header("Location: index.php");
+    header("Location: ".$_SERVER['SERVER_NAME']."/index");
 }
