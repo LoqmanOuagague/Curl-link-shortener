@@ -196,9 +196,13 @@ footer {
   color: #fff;
   padding: 10px;
 }
-footer span {
+footer > a {
   text-decoration: underline;
   font-weight: 600;
+  color: #fff;
+}
+footer span *{
+  color: #ffffffcf;
 }
 .error {
   text-align: center;

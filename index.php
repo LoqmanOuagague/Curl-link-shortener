@@ -29,9 +29,9 @@
                     <li>
                         <a href="#why-us">Why us ?</a>
                     </li>
-                    <li>Donate</li>
-                    <li>
-                        <a href="#contact-us">
+                    <li style="display: none;">Donate</li>
+                    <li style="display: none;">
+                        <a href="#contact-us" >
                             Contact us
                         </a>
                     </li>
@@ -84,7 +84,7 @@
                 <p>this website is not a revenue-earning project so there is no ads</p>
             </div>
         </section>
-        <section class="contact-us" id="contact-us">
+        <section class="contact-us" id="contact-us" style="display: none;">
             <h3 class="title">Contact us </h3>
             <form action="" class="contact-us-form">
                 <label>Your name</label>
@@ -100,7 +100,8 @@
         </section>
     </div>
     <footer>
-        This website is designed and programmed by <span>@Loqman.ouagague</span>
+        This website is designed and programmed by <a href="https://github.com/LoqmanOuagague/">@Loqman.ouagague</a>
+        <span>(E-mail address: <a href="mailto:loqman.ouagague@gmail.com">loqman.ouagague@gmail.com</a>)</span>
     </footer>
     <script src="js/main.js"></script>
 </body>
